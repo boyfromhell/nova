@@ -504,7 +504,7 @@ export default {
                     Nova.request().get('/nova-api/' + this.resourceName, {
                         params: this.resourceRequestQueryString,
                     }),
-                    500
+                    300
                 ).then(({ data }) => {
                     this.resources = []
 
@@ -560,7 +560,6 @@ export default {
          * Get the lenses available for the current resource.
          */
         getLenses() {
-            this.loading = true
             this.lenses = []
 
             if (this.viaResource) {

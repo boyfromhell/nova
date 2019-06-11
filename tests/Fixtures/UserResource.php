@@ -104,6 +104,8 @@ class UserResource extends Resource
                 ];
             }),
 
+            BelongsToMany::make('Related Users', 'relatedUsers', self::class),
+
             Text::make('Index')->onlyOnIndex(),
             Text::make('Detail')->onlyOnDetail(),
             Text::make('Form')->onlyOnForms(),
